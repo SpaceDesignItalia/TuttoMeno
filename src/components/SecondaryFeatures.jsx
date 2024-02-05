@@ -15,6 +15,8 @@ import { Container } from '@/components/Container'
 import casaPhoto from '@/images/assicurazioni/casa.png'
 import luceegasPhoto from '@/images/assicurazioni/luceegas.png'
 import vitaPhoto from '@/images/assicurazioni/vita.png'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 const features = [
   {
@@ -31,6 +33,7 @@ const features = [
         </>
       )
     },
+    delay: 0.45,
   },
   {
     name: 'Luce e gas',
@@ -45,6 +48,7 @@ const features = [
         </>
       )
     },
+    delay: 0.65,
   },
   {
     name: 'Assicurazione casa e commerciale',
@@ -59,6 +63,7 @@ const features = [
         </>
       )
     },
+    delay: 0.85,
   },
 ]
 
@@ -94,15 +99,15 @@ function Feature({ feature, isActive, className, ...props }) {
   )
 }
 
-function FeaturesMobile() {
+function FeaturesMobile({ inView, variants }) {
   return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
+    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 md:-mx-6 md:px-6 lg:hidden">
       {features.map((feature) => (
         <div key={feature.summary}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
+            <div className="relative mx-auto w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
               <Image
                 className="w-full"
                 src={feature.image}
@@ -117,27 +122,39 @@ function FeaturesMobile() {
   )
 }
 
-function FeaturesDesktop() {
+function FeaturesDesktop({ inView, variants }) {
   return (
     <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
         <>
           <Tab.List className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
-              <Feature
-                key={feature.summary}
-                feature={{
-                  ...feature,
-                  name: (
-                    <Tab className="ui-not-focus-visible:outline-none">
-                      <span className="absolute inset-0" />
-                      {feature.name}
-                    </Tab>
-                  ),
+              <motion.div
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={variants}
+                transition={{
+                  duration: 1.5,
+                  type: 'spring',
+                  bounce: 0.25,
+                  delay: feature.delay || 0,
                 }}
-                isActive={featureIndex === selectedIndex}
-                className="relative"
-              />
+                key={feature.summary}
+              >
+                <Feature
+                  feature={{
+                    ...feature,
+                    name: (
+                      <Tab className="ui-not-focus-visible:outline-none">
+                        <span className="absolute inset-0" />
+                        {feature.name}
+                      </Tab>
+                    ),
+                  }}
+                  isActive={featureIndex === selectedIndex}
+                  className="relative"
+                />
+              </motion.div>
             ))}
           </Tab.List>
           <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
@@ -173,25 +190,58 @@ function FeaturesDesktop() {
 }
 
 export function SecondaryFeatures() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-40% 0px',
+  })
+
+  const variants = {
+    hidden: { opacity: 0, y: 150 },
+    visible: { opacity: 1, y: 0 },
+  }
+
   return (
     <section
+      ref={ref}
       id="personali"
       aria-label="Features for simplifying everyday business tasks"
       className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <motion.h2
+            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{
+              duration: 1.5,
+              type: 'spring',
+              bounce: 0.25,
+            }}
+          >
             Proteggi il tuo futuro con noi
-          </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-lg tracking-tight text-slate-700"
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{
+              duration: 1.5,
+              type: 'spring',
+              bounce: 0.25,
+              delay: 0.25,
+            }}
+          >
             Da assicurazioni sulla vita personalizzate a tariffe competitive per
-            l'energia domestica e polizze complete per la tua azienda e casa,
-            siamo il tuo partner affidabile per la sicurezza su tutti i fronti.
-          </p>
+            l&apos;energia domestica e polizze complete per la tua azienda e
+            casa, siamo il tuo partner affidabile per la sicurezza su tutti i
+            fronti.
+          </motion.p>
         </div>
-        <FeaturesMobile />
-        <FeaturesDesktop />
+        <FeaturesMobile inView={inView} variants={variants} />
+        <FeaturesDesktop inView={inView} variants={variants} />
       </Container>
     </section>
   )

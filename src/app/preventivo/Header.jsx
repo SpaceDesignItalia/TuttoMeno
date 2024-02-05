@@ -79,12 +79,12 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#">Home</MobileNavLink>
-            <MobileNavLink href="#mezzi">Assicurazione mezzi</MobileNavLink>
-            <MobileNavLink href="#personali">
+            <MobileNavLink href="/">Home</MobileNavLink>
+            <MobileNavLink href="/#mezzi">Assicurazione mezzi</MobileNavLink>
+            <MobileNavLink href="/#personali">
               Assicurazioni personali
             </MobileNavLink>
-            <MobileNavLink href="#cta">Richiedi preventivo</MobileNavLink>
+            <MobileNavLink href="/#cta">Richiedi preventivo</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -102,10 +102,10 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden lg:flex lg:gap-x-6">
-              <NavLink href="#">Home</NavLink>
-              <NavLink href="#mezzi">Assicurazione mezzi</NavLink>
-              <NavLink href="#personali">Assicurazione personali</NavLink>
-              <NavLink href="#cta">Richiedi preventivo</NavLink>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/#mezzi">Assicurazione mezzi</NavLink>
+              <NavLink href="/#personali">Assicurazione personali</NavLink>
+              <NavLink href="/#cta">Richiedi preventivo</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
