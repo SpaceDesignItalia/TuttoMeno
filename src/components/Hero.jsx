@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export function Hero() {
   return (
-    <Container className="flex h-screen flex-col items-center justify-center">
+    <Container className="flex flex-col items-center justify-center py-16  md:h-screen md:py-0">
       <motion.h1
         className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl"
         initial={{ y: 150, opacity: 0 }}
