@@ -98,17 +98,21 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Button href="/preventivo" color="blue">
-              <span>Richiedi un preventivo</span>
-            </Button>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <Link href="/" className="hidden md:block">
+              <Logo />
+            </Link>
             <div className="hidden lg:flex lg:gap-x-6">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/#mezzi">Assicurazione mezzi</NavLink>
               <NavLink href="/#personali">Assicurazione personali</NavLink>
               <NavLink href="/#cta">Richiedi preventivo</NavLink>
             </div>
+          </div>
+          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <Button href="/preventivo" color="blue">
+              <span>Richiedi un preventivo</span>
+            </Button>
+
             <div className="-mr-1 lg:hidden">
               <MobileNavigation />
             </div>
