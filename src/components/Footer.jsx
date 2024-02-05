@@ -65,7 +65,7 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className="mt-10">
                 <h3 className="text-sm font-semibold leading-6 text-white">
                   Privacy Policy
                 </h3>
