@@ -109,7 +109,10 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="/preventivo" color="blue">
+            <Button
+              href="/preventivo"
+              className="bg-[#c30d23] hover:bg-[#db0f27]"
+            >
               <span>Richiedi un preventivo</span>
             </Button>
 

@@ -14,11 +14,11 @@ export function Hero() {
         transition={{ duration: 1.5, type: 'spring', bounce: 0.25 }}
       >
         Proteggi ciò che conta di più con{' '}
-        <span className="relative whitespace-nowrap text-blue-600">
+        <span className="relative whitespace-nowrap text-[#c30d23]">
           <motion.svg
             aria-hidden="true"
             viewBox="0 0 418 42"
-            className="absolute left-0 top-2/3 h-[0.58em] w-full fill-blue-300/70"
+            className="absolute left-0 top-2/3 h-[0.58em] w-full fill-[#db0f27]/70"
             preserveAspectRatio="none"
             initial={{ y: 150, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
