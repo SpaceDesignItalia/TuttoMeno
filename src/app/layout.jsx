@@ -34,6 +34,9 @@ export default function RootLayout({ children }) {
         lexend.variable,
       )}
     >
+      <head>
+        <meta name="format-detection" content="telephone=yes" />
+      </head>
       <body className="flex h-full flex-col">{children}</body>
     </html>
   )
