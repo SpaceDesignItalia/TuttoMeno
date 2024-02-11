@@ -102,11 +102,7 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" className="hidden md:block">
-              <img
-                src="https://tuttomeno.com/media/logo.4e3bc220.png"
-                alt="logo"
-                className="h-16 w-16 rounded-lg"
-              />
+              <LogoNavbar />
             </Link>
             <div className="hidden lg:flex lg:gap-x-6">
               <NavLink href="#">Home</NavLink>

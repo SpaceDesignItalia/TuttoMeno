@@ -4,8 +4,11 @@ import logoImage from '@/images/assicurazioni/QRWeChat.png'
 export function Logo(props) {
   return (
     <div>
-      <Image src={logoImage} alt="logo" className=" h-40 w-40 rounded-lg" />
-      <Image className=" h-40 w-40 rounded-lg" src={logoImage} priority />
+      <img
+        src="https://tuttomeno.com/media/QRWeChat.9844a66c.png"
+        alt="logo"
+        className=" h-40 w-40 rounded-lg"
+      />
     </div>
   )
 }
