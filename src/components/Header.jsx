@@ -3,11 +3,12 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
+import { PhoneIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
+import { LogoNavbar } from '@/components/LogoNavbar'
 import { NavLink } from '@/components/NavLink'
 
 function MobileNavLink({ href, children }) {
@@ -99,7 +100,7 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" className="hidden md:block">
-              <Logo />
+              <LogoNavbar />
             </Link>
             <div className="hidden lg:flex lg:gap-x-6">
               <NavLink href="#">Home</NavLink>
@@ -110,12 +111,21 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <Button
-              href="/preventivo"
-              className="bg-[#c30d23] hover:bg-[#db0f27]"
+              href="tel:3513387008"
+              className="hidden bg-[#c30d23] hover:bg-[#db0f27] md:flex"
             >
-              <span>Richiedi un preventivo</span>
+              <span>Chiamaci: 351 338 7008</span>
             </Button>
 
+            <Button
+              href="tel:3513387008"
+              className="flex bg-[#c30d23] hover:bg-[#db0f27] md:hidden"
+            >
+              <span className="flex flex-row items-center justify-center gap-2">
+                <PhoneIcon className=" h-4 w-4" />
+                Chiamaci
+              </span>
+            </Button>
             <div className="-mr-1 lg:hidden">
               <MobileNavigation />
             </div>

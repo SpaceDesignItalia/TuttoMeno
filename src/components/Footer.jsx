@@ -4,6 +4,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/solid'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { WeChatIcon } from '@/components/WeChatIcon'
 
 export function Footer() {
   const date = new Date().getFullYear()
@@ -17,14 +18,17 @@ export function Footer() {
     privacy: [{ name: 'Privacy Policy', href: '/privacy-policy' }],
   }
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-[#111]" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Logo />
+            <div className="flex flex-col gap-5">
+              <WeChatIcon />
+              <Logo />
+            </div>
             <div>
               <ul className="flex flex-col gap-5">
                 <li className="flex flex-row gap-2 text-white">
@@ -37,7 +41,7 @@ export function Footer() {
                 </li>
                 <li className="flex flex-row items-center gap-2 text-white">
                   <MapPinIcon className="h-5 w-5" />
-                  Via Chemnitz, 21/6, 59100 Prato
+                  Via Chemnitz, 21/6 | 59100 Prato
                 </li>
               </ul>
             </div>
@@ -89,7 +93,7 @@ export function Footer() {
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
             <br />
-            &copy; {date} TuttoMeno.com di Malluzzo Samuel, P.Iva: 073326404865,
+            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 073326404865,
             PEC: tuttomeno@pec.it
           </p>
         </div>

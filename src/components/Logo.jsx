@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import logoImage from '@/images/logos/logo.png'
+import logoImage from '@/images/logos/QRWeChat.png'
 
 export function Logo(props) {
   return (
     <div>
-      <Image src={logoImage} alt="logo" className="h-14 w-14" />
+      <Image src={logoImage} alt="logo" className=" h-40 w-40 rounded-lg" />
     </div>
   )
 }
