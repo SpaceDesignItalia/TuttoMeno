@@ -5,6 +5,8 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { WeChatIcon } from '@/components/WeChatIcon'
+import logoImage from '@/images/assicurazioni/QRWeChat.png'
+import Image from 'next/image'
 
 export function Footer() {
   const date = new Date().getFullYear()
@@ -27,7 +29,11 @@ export function Footer() {
           <div className="space-y-8">
             <div className="flex flex-col gap-5">
               <WeChatIcon />
-              <Logo />
+              <Image
+                src={logoImage}
+                alt="logo"
+                className=" h-40 w-40 rounded-lg"
+              />
             </div>
             <div>
               <ul className="flex flex-col gap-5">
