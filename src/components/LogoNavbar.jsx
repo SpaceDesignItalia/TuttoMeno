@@ -1,10 +1,13 @@
 import Image from 'next/image'
-import logoImage from '@/images/assicurazioni/logo.png'
 
 export function LogoNavbar(props) {
   return (
     <div>
-      <Image src={logoImage} alt="logo" className=" h-16 w-16 rounded-lg" />
+      <Image
+        src="https://tuttomeno.com/media/logo.4e3bc220.png"
+        alt="logo"
+        className=" h-16 w-16 rounded-lg"
+      />
     </div>
   )
 }
