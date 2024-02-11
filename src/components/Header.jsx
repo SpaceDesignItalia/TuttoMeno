@@ -113,7 +113,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <Button
-              href="tel:+39 3513387008"
+              href="tel:+393513387008"
               className="hidden bg-[#c30d23] hover:bg-[#db0f27] md:flex"
             >
               <span>Chiamaci: 351 338 7008</span>
