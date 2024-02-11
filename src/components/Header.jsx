@@ -10,6 +10,8 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { LogoNavbar } from '@/components/LogoNavbar'
 import { NavLink } from '@/components/NavLink'
+import Image from 'next/image'
+import logoImage from '@/images/assicurazioni/logo.png'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -100,7 +102,11 @@ export function Header() {
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" className="hidden md:block">
-              <LogoNavbar />
+              <Image
+                src={logoImage}
+                alt="logo"
+                className=" h-16 w-16 rounded-lg"
+              />
             </Link>
             <div className="hidden lg:flex lg:gap-x-6">
               <NavLink href="#">Home</NavLink>
