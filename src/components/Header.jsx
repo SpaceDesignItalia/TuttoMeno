@@ -11,7 +11,6 @@ import { Container } from '@/components/Container'
 import { LogoNavbar } from '@/components/LogoNavbar'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
-import logoImage from '@/images/assicurazioni/logo.png'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -103,7 +102,7 @@ export function Header() {
           <div className="flex items-center md:gap-x-12">
             <Link href="/" className="hidden md:block">
               <Image
-                src={logoImage}
+                src="https://tuttomeno.com/media/logo.4e3bc220.png"
                 alt="logo"
                 className=" h-16 w-16 rounded-lg"
               />
