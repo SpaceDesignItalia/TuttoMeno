@@ -11,6 +11,7 @@ import { Container } from '@/components/Container'
 import { LogoNavbar } from '@/components/LogoNavbar'
 import { NavLink } from '@/components/NavLink'
 import Image from 'next/image'
+import logoImage from '@/images/assicurazioni/logo.png'
 
 function MobileNavLink({ href, children }) {
   return (
