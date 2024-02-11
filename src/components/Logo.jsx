@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImage from '@/images/logos/QRWeChat.png'
+import logoImage from '@/images/assicurazioni/QRWeChat.png'
 
 export function Logo(props) {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImage from '@/images/logos/WeChaticon.png'
+import logoImage from '@/images/assicurazioni/WeChaticon.png'
 
 export function WeChatIcon(props) {
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoImage from '@/images/logos/logo.png'
+import logoImage from '@/images/assicurazioni/logo.png'
 
 export function LogoNavbar(props) {
   return (
