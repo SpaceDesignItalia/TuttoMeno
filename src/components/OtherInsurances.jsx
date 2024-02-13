@@ -103,7 +103,7 @@ export default function OtherInsurances() {
               >
                 <dt className="font-semibold text-gray-900">
                   <CheckIcon
-                    className="absolute left-0 top-1 h-5 w-5 text-indigo-500"
+                    className="absolute left-0 top-1 h-5 w-5 text-[#db0f27]"
                     aria-hidden="true"
                   />
                   {feature.name}

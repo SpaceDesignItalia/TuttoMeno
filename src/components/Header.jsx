@@ -3,12 +3,15 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
+import { PhoneIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
+import { LogoNavbar } from '@/components/LogoNavbar'
 import { NavLink } from '@/components/NavLink'
+import Image from 'next/image'
+import logoImage from '@/images/assicurazioni/logo.png'
 
 function MobileNavLink({ href, children }) {
   return (
@@ -98,17 +101,33 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Button href="/preventivo" color="blue">
-              <span>Richiedi un preventivo</span>
-            </Button>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <Link href="/" className="hidden md:block">
+              <LogoNavbar />
+            </Link>
             <div className="hidden lg:flex lg:gap-x-6">
               <NavLink href="#">Home</NavLink>
               <NavLink href="#mezzi">Assicurazione mezzi</NavLink>
               <NavLink href="#personali">Assicurazione personali</NavLink>
               <NavLink href="#cta">Richiedi preventivo</NavLink>
             </div>
+          </div>
+          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <Button
+              href="tel:+393513387008"
+              className="hidden bg-[#c30d23] hover:bg-[#db0f27] md:flex"
+            >
+              <span>Chiamaci: 351 338 7008</span>
+            </Button>
+
+            <Button
+              href="tel:3513387008"
+              className="flex bg-[#c30d23] hover:bg-[#db0f27] md:hidden"
+            >
+              <span className="flex flex-row items-center justify-center gap-2">
+                <PhoneIcon className=" h-4 w-4" />
+                Chiamaci
+              </span>
+            </Button>
             <div className="-mr-1 lg:hidden">
               <MobileNavigation />
             </div>

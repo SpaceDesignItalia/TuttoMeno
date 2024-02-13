@@ -17,7 +17,7 @@ export default function Register() {
       <Header />
       <div className="container mx-auto max-w-2xl px-5 py-10">
         <div>
-          <h1 className="text-3xl font-bold text-blue-500">Privacy Policy</h1>
+          <h1 className="text-3xl font-bold text-[#c30d23]">Privacy Policy</h1>
           <p className="text-gray-600">Ultimo aggiornamento: 5 febbraio 2024</p>
         </div>
         <div className="mt-8">

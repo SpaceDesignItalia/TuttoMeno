@@ -17,12 +17,7 @@ export default function Register() {
       <Header />
 
       <SlimLayout>
-        <div className="flex">
-          <Link href="/" aria-label="Home">
-            <Logo className="h-10 w-auto" />
-          </Link>
-        </div>
-        <h2 className="mt-20 text-lg font-semibold text-gray-900">
+        <h2 className="mt-20 text-xl font-semibold text-gray-900">
           Richiedi un preventivo
         </h2>
 
@@ -31,6 +26,7 @@ export default function Register() {
           method="POST"
           className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2"
         >
+          <input type="hidden" name="_subject" value="Nuova richiesta!" />
           <TextField
             label="Nome"
             name="nome"
@@ -74,7 +70,7 @@ export default function Register() {
                 rows={4}
                 name="messaggio"
                 id="comment"
-                className="focus:ring-primary block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                className="block w-full appearance-none rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-[#c30d23] focus:bg-white focus:outline-none focus:ring-[#c30d23] sm:text-sm"
                 defaultValue={''}
               />
             </div>
@@ -87,7 +83,7 @@ export default function Register() {
                       aria-describedby="candidates-description"
                       name="privacy-policy"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-[#c30d23] focus:ring-[#c30d23]"
                       required
                     />
                   </div>
@@ -100,7 +96,7 @@ export default function Register() {
                     </label>{' '}
                     <span id="privacy-policy-desc" className="text-gray-500">
                       <a
-                        className=" font-bold text-blue-600"
+                        className=" font-bold text-[#c30d23]"
                         href="/privacy-policy"
                       >
                         Privacy Policy{' '}
@@ -117,7 +113,7 @@ export default function Register() {
             <Button
               type="submit"
               variant="solid"
-              color="blue"
+              color="slate"
               className="w-full"
             >
               <span>invia richiesta</span>
