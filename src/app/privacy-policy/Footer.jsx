@@ -93,8 +93,8 @@ export function Footer() {
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
             <br />
-            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 073326404865,
-            PEC: tuttomeno@pec.it
+            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486, PEC:
+            tuttomeno@pec.it
           </p>
         </div>
       </div>
