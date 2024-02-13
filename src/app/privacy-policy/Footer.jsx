@@ -10,10 +10,10 @@ export function Footer() {
   const date = new Date().getFullYear()
   const navigation = {
     solutions: [
-      { name: 'Home', href: '#' },
-      { name: 'Assicurazioni Mezzi', href: '#mezzi' },
-      { name: 'Assicurazioni personali', href: '#personali' },
-      { name: 'Richiedi preventivo', href: '#cta' },
+      { name: 'Home', href: '/#' },
+      { name: 'Assicurazioni Mezzi', href: '/#mezzi' },
+      { name: 'Assicurazioni personali', href: '/#personali' },
+      { name: 'Richiedi preventivo', href: '/#cta' },
     ],
     privacy: [{ name: 'Privacy Policy', href: '/privacy-policy' }],
   }
