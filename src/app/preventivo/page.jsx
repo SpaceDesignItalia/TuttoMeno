@@ -6,6 +6,7 @@ import { Logo } from '@/components/Logo'
 import { SlimLayout } from '@/components/SlimLayout'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import CookieConsent from '../CookieConsent'
 
 export const metadata = {
   title: 'Richiedi preventivo',
@@ -122,6 +123,7 @@ export default function Register() {
         </form>
       </SlimLayout>
       <Footer />
+      <CookieConsent />
     </>
   )
 }

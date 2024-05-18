@@ -10,12 +10,15 @@ export function Footer() {
   const date = new Date().getFullYear()
   const navigation = {
     solutions: [
-      { name: 'Home', href: '/#' },
-      { name: 'Assicurazioni Mezzi', href: '/#mezzi' },
-      { name: 'Assicurazioni personali', href: '/#personali' },
-      { name: 'Richiedi preventivo', href: '/#cta' },
+      { name: 'Home', href: '/' },
+      { name: 'Assicurazioni Mezzi', href: './#mezzi' },
+      { name: 'Assicurazioni personali', href: './#personali' },
+      { name: 'Richiedi preventivo', href: './#cta' },
     ],
-    privacy: [{ name: 'Privacy Policy', href: '/privacy-policy' }],
+    privacy: [
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Cookie Policy', href: '/cookie-policy' },
+    ],
   }
   return (
     <footer className="bg-[#111]" aria-labelledby="footer-heading">
@@ -92,9 +95,16 @@ export function Footer() {
             <br />
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
+            <a
+              href="https://servizi.ivass.it/RuirPubblica/DetailResult.faces"
+              className="text-xs leading-5 text-gray-400 underline"
+            >
+              <span>Verifica iscrizione IVASS</span>
+            </a>
             <br />
-            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486, PEC:
-            tuttomeno@pec.it
+            <br />
+            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 073326404865,
+            PEC: tuttomeno@pec.it
           </p>
         </div>
       </div>

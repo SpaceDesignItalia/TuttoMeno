@@ -5,7 +5,7 @@ import { Hero } from '@/components/Hero'
 import OtherInsurances from '@/components/OtherInsurances'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-
+import CookieConsent from './CookieConsent'
 export default function Home() {
   return (
     <>
@@ -18,6 +18,7 @@ export default function Home() {
         <CallToAction />
       </main>
       <Footer />
+      <CookieConsent />
     </>
   )
 }

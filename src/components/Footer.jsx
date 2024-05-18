@@ -15,7 +15,10 @@ export function Footer() {
       { name: 'Assicurazioni personali', href: '#personali' },
       { name: 'Richiedi preventivo', href: '#cta' },
     ],
-    privacy: [{ name: 'Privacy Policy', href: '/privacy-policy' }],
+    privacy: [
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Cookie Policy', href: '/cookie-policy' },
+    ],
   }
   return (
     <footer className="bg-[#111]" aria-labelledby="footer-heading">
@@ -91,6 +94,13 @@ export function Footer() {
             assicurativo
             <br />
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
+            <br />
+            <a
+              href="https://servizi.ivass.it/RuirPubblica/DetailResult.faces"
+              className="text-xs leading-5 text-gray-400 underline"
+            >
+              <span>Verifica iscrizione IVASS</span>
+            </a>
             <br />
             <br />
             &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486,
