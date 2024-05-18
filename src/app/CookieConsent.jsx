@@ -29,7 +29,8 @@ export default function CookieConsent() {
   return (
     <div className="fixed bottom-0 flex w-full items-center justify-between bg-gray-800 p-4 text-white">
       <p className="m-0">
-        Questo sito utilizza i cookie per migliorare l'esperienza dell'utente.{' '}
+        Questo sito utilizza i cookie per migliorare l&apos;esperienza
+        dell&apos;utente.{' '}
         <a href="/cookie-policy" className="text-[#c30d23] underline">
           Leggi di più
         </a>

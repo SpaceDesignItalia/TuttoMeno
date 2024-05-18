@@ -18,8 +18,9 @@ export default function Register() {
         <div className="mt-8">
           <div>
             <p className="text-gray-600">
-              Tuttomeno.com ("noi", "nostro" o "sito") utilizza i cookie per
-              migliorare l'esperienza dell'utente e garantire il corretto
+              Tuttomeno.com (&ldquo;noi&ldquo;, &ldquo;nostro&ldquo; o
+              &ldquo;sito&ldquo;) utilizza i cookie per migliorare
+              l&apos;esperienza dell&apos;utente e garantire il corretto
               funzionamento del sito. La presente Cookie Policy spiega cosa sono
               i cookie, come li utilizziamo e le opzioni disponibili per
               gestirli.
@@ -36,7 +37,7 @@ export default function Register() {
               preferenze (come login, lingua, dimensioni dei caratteri e altre
               preferenze di visualizzazione) per un certo periodo di tempo, in
               modo da non doverle reinserire ogni volta che torni sul sito o
-              navighi da una pagina all'altra.
+              navighi da una pagina all&apos;altra.
             </p>
           </div>
           <div className="mt-8">
@@ -67,7 +68,7 @@ export default function Register() {
             <p className="text-gray-600">
               Se hai domande o preoccupazioni riguardo alla nostra Cookie Policy
               o alle nostre pratiche in materia di privacy, puoi contattarci
-              all'indirizzo email:{' '}
+              all&apos;indirizzo email:{' '}
               <a href="mailto:info@tuttomeno.it" className="text-blue-500">
                 info@tuttomeno.it
               </a>
