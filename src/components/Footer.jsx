@@ -96,15 +96,15 @@ export function Footer() {
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
             <a
-              href="https://servizi.ivass.it/RuirPubblica/DetailResult.faces"
+              href="https://servizi.ivass.it/RuirPubblica/Search.faces"
               className="text-xs leading-5 text-gray-400 underline"
             >
               <span>Verifica iscrizione IVASS</span>
             </a>
             <br />
             <br />
-            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486,
-            PEC: tuttomeno@pec.it
+            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486, PEC:
+            tuttomeno@pec.it
           </p>
         </div>
       </div>
