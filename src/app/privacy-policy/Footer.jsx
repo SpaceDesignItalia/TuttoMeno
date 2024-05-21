@@ -95,6 +95,11 @@ export function Footer() {
             <br />
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
+            AUTORITÀ COMPETENTE ALLA VIGILANZA SULL&apos;ATTIVITA :
+            <br />
+            IVASS VIA DEL QUIRINALE 21 00187 ROMA.
+            <br />
+            <br />
             <a
               href="https://servizi.ivass.it/RuirPubblica/Search.faces"
               className="text-xs leading-5 text-gray-400 underline"
