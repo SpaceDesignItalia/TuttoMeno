@@ -10,12 +10,15 @@ export function Footer() {
   const date = new Date().getFullYear()
   const navigation = {
     solutions: [
-      { name: 'Home', href: '/#' },
-      { name: 'Assicurazioni Mezzi', href: '/#mezzi' },
-      { name: 'Assicurazioni personali', href: '/#personali' },
-      { name: 'Richiedi preventivo', href: '/#cta' },
+      { name: 'Home', href: '/' },
+      { name: 'Assicurazioni Mezzi', href: './#mezzi' },
+      { name: 'Assicurazioni personali', href: './#personali' },
+      { name: 'Richiedi preventivo', href: './#cta' },
     ],
-    privacy: [{ name: 'Privacy Policy', href: '/privacy-policy' }],
+    privacy: [
+      { name: 'Privacy Policy', href: '/privacy-policy' },
+      { name: 'Cookie Policy', href: '/cookie-policy' },
+    ],
   }
   return (
     <footer className="bg-[#111]" aria-labelledby="footer-heading">
@@ -92,9 +95,21 @@ export function Footer() {
             <br />
             Nominativo: Malluzzo Samuel - Data iscrizione: 18/01/2024
             <br />
+            AUTORITÀ COMPETENTE ALLA VIGILANZA SULL&apos;ATTIVITA :
             <br />
-            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 07332640486, PEC:
-            tuttomeno@pec.it
+            IVASS VIA DEL QUIRINALE 21 00187 ROMA.
+            <br />
+            <br />
+            <a
+              href="https://servizi.ivass.it/RuirPubblica/Search.faces"
+              className="text-xs leading-5 text-gray-400 underline"
+            >
+              <span>Verifica iscrizione IVASS</span>
+            </a>
+            <br />
+            <br />
+            &copy; {date} TuttoMeno di Malluzzo Samuel, P.Iva: 073326404865,
+            PEC: tuttomeno@pec.it
           </p>
         </div>
       </div>

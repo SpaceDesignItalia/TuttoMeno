@@ -6,6 +6,7 @@ import { Logo } from '@/components/Logo'
 import { SlimLayout } from '@/components/SlimLayout'
 import { Header } from './Header'
 import { Footer } from './Footer'
+import CookieConsent from '../CookieConsent'
 
 export const metadata = {
   title: 'Privacy Policy',
@@ -113,6 +114,7 @@ export default function Register() {
         </div>
       </div>
       <Footer />
+      <CookieConsent />
     </>
   )
 }
