@@ -44,7 +44,7 @@ export function Footer() {
                 </li>
                 <li className="flex flex-row items-center gap-2 text-white">
                   <MapPinIcon className="h-5 w-5" />
-                  Via XX Settembre, 118 | 50129 Firenze
+                  Via XX Settembre, 126 | 50129 Firenze
                 </li>
               </ul>
             </div>
